@@ -1,0 +1,274 @@
+/* Final Header Enhancements */
+
+/* Add professional header shadow on scroll */
+.navbar.scrolled::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    height: 10px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1), transparent);
+    pointer-events: none;
+}
+
+/* Enhanced logo container */
+.nav-logo::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: -1;
+}
+
+.nav-logo:hover::before {
+    opacity: 1;
+}
+
+/* Professional nav menu styling */
+.nav-menu::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #667eea);
+    background-size: 400% 400%;
+    border-radius: 52px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: gradientShift 8s ease infinite;
+    z-index: -1;
+}
+
+.nav-menu:hover::before {
+    opacity: 0.3;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+/* Enhanced nav link interactions */
+.nav-link::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(102, 126, 234, 0.3), transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.nav-link:hover::after {
+    width: 100px;
+    height: 100px;
+}
+
+/* Professional ship button enhancements */
+.ship-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.1));
+    border-radius: 40px;
+    pointer-events: none;
+}
+
+/* Add subtle glow effect to entire navbar */
+.navbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        rgba(102, 126, 234, 0.02) 25%, 
+        rgba(118, 75, 162, 0.02) 50%, 
+        rgba(240, 147, 251, 0.02) 75%, 
+        transparent 100%
+    );
+    pointer-events: none;
+    animation: navbarGlow 10s ease-in-out infinite;
+}
+
+@keyframes navbarGlow {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+}
+
+/* Enhanced mobile hamburger */
+.hamburger::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+    border-radius: 15px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.hamburger:hover::before {
+    opacity: 1;
+}
+
+/* Professional typography improvements */
+.nav-link {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-optical-sizing: auto;
+    font-variation-settings: "wght" 600;
+}
+
+.nav-logo span {
+    font-optical-sizing: auto;
+    font-variation-settings: "wght" 900;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Add professional focus states for accessibility */
+.nav-link:focus,
+.ship-btn:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 2px;
+    border-radius: 30px;
+}
+
+.nav-logo:focus {
+    outline: 2px solid #667eea;
+    outline-offset: 4px;
+    border-radius: 15px;
+}
+
+/* Enhanced responsive design */
+@media (max-width: 1024px) {
+    .nav-menu {
+        gap: 25px;
+        padding: 6px 10px;
+    }
+    
+    .nav-link {
+        padding: 12px 18px;
+        font-size: 0.9rem;
+    }
+    
+    .ship-btn {
+        padding: 14px 26px !important;
+        font-size: 0.85rem !important;
+        margin-left: 15px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-menu {
+        gap: 20px;
+    }
+    
+    .nav-link {
+        padding: 10px 15px;
+    }
+}
+
+/* Professional loading state for navbar */
+.navbar.loading {
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.navbar.loading::before {
+    animation-duration: 1s;
+}
+
+/* Add subtle parallax effect */
+.nav-container {
+    transform-style: preserve-3d;
+}
+
+.navbar.scrolled .nav-container {
+    transform: translateZ(0) scale(0.98);
+}
+
+/* Professional color transitions */
+.navbar {
+    transition: 
+        background-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        box-shadow 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        border-bottom-color 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+        backdrop-filter 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Enhanced visual hierarchy */
+.nav-logo {
+    z-index: 10;
+}
+
+.nav-menu {
+    z-index: 8;
+}
+
+.ship-btn {
+    z-index: 9;
+}
+
+/* Professional micro-interactions */
+.nav-link:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.ship-btn:active {
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Add professional brand consistency */
+.navbar * {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Enhanced performance optimizations */
+.navbar,
+.nav-container,
+.nav-logo,
+.nav-menu,
+.nav-link,
+.ship-btn {
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+/* Professional print styles */
+@media print {
+    .navbar {
+        position: static;
+        background: white;
+        box-shadow: none;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .nav-menu::before,
+    .navbar::before,
+    .navbar::after {
+        display: none;
+    }
+}

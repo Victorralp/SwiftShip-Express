@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚀 SwiftShip Express - Enhanced Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .demo-header {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            animation: shimmer 3s infinite;
+        }
+        
+        .demo-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .demo-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-dark);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .demo-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(102, 126, 234, 0.1), transparent);
+            transition: left 0.8s ease;
+        }
+        
+        .demo-card:hover::before {
+            left: 100%;
+        }
+        
+        .demo-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(102, 126, 234, 0.3);
+        }
+        
+        .demo-card h3 {
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .demo-card p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        
+        .demo-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .demo-list li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+        
+        .demo-list li::before {
+            content: "✨";
+            position: absolute;
+            left: 0;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+        
+        @keyframes sparkle {
+            0%, 100% { transform: scale(1) rotate(0deg); }
+            50% { transform: scale(1.2) rotate(180deg); }
+        }
+        
+        .demo-btn {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .demo-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.6s ease;
+        }
+        
+        .demo-btn:hover::before {
+            left: 100%;
+        }
+        
+        .demo-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+        }
+        
+        .demo-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .stat-item {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--glass-border);
+            transition: all 0.3s ease;
+        }
+        
+        .stat-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.2);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+        }
+        
+        .stat-label {
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo-header">
+        <h1>🚀 SwiftShip Express - Enhanced Demo</h1>
+        <p>Experience the most advanced shipping website with stunning animations and professional design</p>
+    </div>
+
+    <div class="demo-stats">
+        <div class="stat-item">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Cool Animations</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Responsive</div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-number">∞</div>
+            <div class="stat-label">Possibilities</div>
+        </div>
+    </div>
+
+    <div class="demo-features">
+        <div class="demo-card">
+            <h3>🎨 Visual Enhancements</h3>
+            <p>Stunning visual effects that make the website stand out</p>
+            <ul class="demo-list">
+                <li>Glassmorphism design with backdrop blur</li>
+                <li>Gradient backgrounds and animated particles</li>
+                <li>Smooth CSS transitions and transforms</li>
+                <li>Floating animations and hover effects</li>
+                <li>Dynamic color schemes and shadows</li>
+                <li>Professional loading animations</li>
+            </ul>
+        </div>
+
+        <div class="demo-card">
+            <h3>⚡ Interactive Animations</h3>
+            <p>Engaging animations that enhance user experience</p>
+            <ul class="demo-list">
+                <li>Typewriter effect for hero text</li>
+                <li>Magnetic button interactions</li>
+                <li>Ripple effects on clicks</li>
+                <li>Parallax scrolling elements</li>
+                <li>Timeline animations with staggered delays</li>
+                <li>Form field focus animations</li>
+            </ul>
+        </div>
+
+        <div class="demo-card">
+            <h3>🗺️ Interactive Map</h3>
+            <p>Real-time package tracking with visual map</p>
+            <ul class="demo-list">
+                <li>Live package location markers</li>
+                <li>Animated route visualization</li>
+                <li>Satellite and street view toggle</li>
+                <li>Custom markers with popups</li>
+                <li>Smooth map transitions</li>
+                <li>Real-time position updates</li>
+            </ul>
+        </div>
+
+        <div class="demo-card">
+            <h3>📱 Modern UI/UX</h3>
+            <p>Professional interface with modern design patterns</p>
+            <ul class="demo-list">
+                <li>Mobile-first responsive design</li>
+                <li>Touch-friendly interactions</li>
+                <li>Accessibility optimized</li>
+                <li>Fast loading performance</li>
+                <li>Cross-browser compatibility</li>
+                <li>SEO-friendly structure</li>
+            </ul>
+        </div>
+
+        <div class="demo-card">
+            <h3>🚀 Advanced Features</h3>
+            <p>Cutting-edge functionality for modern web</p>
+            <ul class="demo-list">
+                <li>Real-time form validation</li>
+                <li>Dynamic pricing calculator</li>
+                <li>Auto-generating tracking numbers</li>
+                <li>Mock database integration</li>
+                <li>Progress tracking system</li>
+                <li>Notification system</li>
+            </ul>
+        </div>
+
+        <div class="demo-card">
+            <h3>🎯 Performance</h3>
+            <p>Optimized for speed and smooth performance</p>
+            <ul class="demo-list">
+                <li>CSS3 hardware acceleration</li>
+                <li>Optimized animation timing</li>
+                <li>Lazy loading implementation</li>
+                <li>Minimal JavaScript footprint</li>
+                <li>Compressed assets</li>
+                <li>Smooth 60fps animations</li>
+            </ul>
+        </div>
+    </div>
+
+    <div style="text-align: center; padding: 40px 20px;">
+        <h2 style="color: var(--text-primary); margin-bottom: 30px;">🎮 Try the Demo</h2>
+        <a href="index.html" class="demo-btn">
+            <i class="fas fa-rocket"></i> Launch Main Website
+        </a>
+        <a href="map-test.html" class="demo-btn">
+            <i class="fas fa-map"></i> Test Interactive Map
+        </a>
+        <a href="test-features.html" class="demo-btn">
+            <i class="fas fa-cog"></i> Feature Testing Guide
+        </a>
+    </div>
+
+    <div style="background: var(--glass-bg); backdrop-filter: blur(20px); padding: 30px; margin: 40px 20px; border-radius: 20px; border: 1px solid var(--glass-border); text-align: center;">
+        <h3 style="color: var(--text-primary); margin-bottom: 15px;">🏆 What Makes This Special?</h3>
+        <p style="color: var(--text-secondary); max-width: 800px; margin: 0 auto;">
+            This isn't just another shipping website - it's a showcase of modern web development techniques. 
+            From glassmorphism design to interactive maps, every element is crafted to provide an exceptional 
+            user experience. The combination of stunning visuals, smooth animations, and practical functionality 
+            creates a professional-grade website that stands out from the competition.
+        </p>
+    </div>
+
+    <script src="animations.js"></script>
+</body>
+</html>

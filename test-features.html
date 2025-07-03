@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SwiftShip Express - Feature Test Guide</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+            color: #333;
+        }
+        .test-section {
+            background: #f8fafc;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            border-left: 4px solid #2563eb;
+        }
+        .sample-data {
+            background: #e0f2fe;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        .feature-list {
+            background: #f0fdf4;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: monospace;
+        }
+        .btn {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+        .btn:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h1>🚀 SwiftShip Express - Feature Test Guide</h1>
+    
+    <div class="test-section">
+        <h2>📦 Package Tracking Test</h2>
+        <p>Test the tracking functionality with these sample tracking numbers:</p>
+        <div class="sample-data">
+            <strong>Sample Tracking Numbers:</strong><br>
+            • <code>SW123456789</code> - In Transit (New York → London)<br>
+            • <code>SW987654321</code> - Delivered (Los Angeles → Tokyo)<br>
+            • <code>SW555666777</code> - Auto-generated mock data<br>
+            • <code>SW111222333</code> - Auto-generated mock data
+        </div>
+        <p><strong>How to test:</strong></p>
+        <ol>
+            <li>Use the Quick Track section at the top</li>
+            <li>Or go to the Track Package section</li>
+            <li>Enter any of the sample tracking numbers</li>
+            <li>View the detailed tracking timeline and status</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>💰 Pricing Calculator Test</h2>
+        <div class="feature-list">
+            <strong>Features to test:</strong><br>
+            • Dynamic pricing based on origin/destination<br>
+            • Weight-based calculations<br>
+            • Service type selection<br>
+            • Interactive rate options<br>
+            • Real-time price updates
+        </div>
+        <p><strong>Test scenarios:</strong></p>
+        <ul>
+            <li>US to UK, 2kg, Express service</li>
+            <li>Same country shipping (lower rates)</li>
+            <li>Heavy packages (10kg+)</li>
+            <li>Different service types comparison</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>📋 Shipment Creation Test</h2>
+        <div class="feature-list">
+            <strong>Complete booking system:</strong><br>
+            • Sender information form<br>
+            • Recipient information form<br>
+            • Package details and dimensions<br>
+            • Service selection<br>
+            • Additional options (signature, insurance)<br>
+            • Real-time cost calculation<br>
+            • Form validation<br>
+            • Tracking number generation
+        </div>
+        <p><strong>Test the form:</strong></p>
+        <ol>
+            <li>Fill out all required fields</li>
+            <li>Try submitting with missing fields (validation test)</li>
+            <li>Select different services and options</li>
+            <li>Watch the total cost update in real-time</li>
+            <li>Submit to get a new tracking number</li>
+        </ol>
+    </div>
+
+    <div class="test-section">
+        <h2>📱 Responsive Design Test</h2>
+        <div class="feature-list">
+            <strong>Test on different screen sizes:</strong><br>
+            • Desktop (1200px+)<br>
+            • Tablet (768px - 1199px)<br>
+            • Mobile (320px - 767px)<br>
+            • Mobile menu functionality<br>
+            • Touch-friendly interface
+        </div>
+        <p><strong>How to test:</strong></p>
+        <ul>
+            <li>Resize browser window</li>
+            <li>Use browser dev tools device simulation</li>
+            <li>Test hamburger menu on mobile</li>
+            <li>Check form layouts on small screens</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>✉️ Contact Form Test</h2>
+        <div class="feature-list">
+            <strong>Contact features:</strong><br>
+            • Multiple contact methods<br>
+            • Categorized inquiry types<br>
+            • Form validation<br>
+            • Success confirmation<br>
+            • Business hours display
+        </div>
+        <p><strong>Test categories:</strong></p>
+        <ul>
+            <li>Tracking Issue</li>
+            <li>Billing Question</li>
+            <li>Damage Claim</li>
+            <li>General Inquiry</li>
+            <li>Feedback</li>
+        </ul>
+    </div>
+
+    <div class="test-section">
+        <h2>🎨 Animation & UX Test</h2>
+        <div class="feature-list">
+            <strong>Interactive elements:</strong><br>
+            • Smooth scrolling navigation<br>
+            • Hover effects on cards<br>
+            • Loading animations<br>
+            • Success modals<br>
+            • Fade-in animations on scroll<br>
+            • Floating hero icon<br>
+            • Notification system
+        </div>
+    </div>
+
+    <div class="test-section">
+        <h2>🔧 Technical Features</h2>
+        <div class="feature-list">
+            <strong>Under the hood:</strong><br>
+            • Mock database with sample data<br>
+            • Auto-generation of tracking data<br>
+            • Client-side form validation<br>
+            • Real-time calculations<br>
+            • Local storage simulation<br>
+            • Error handling<br>
+            • Cross-browser compatibility
+        </div>
+    </div>
+
+    <div style="text-align: center; margin: 40px 0;">
+        <a href="index.html" class="btn">🚀 Open SwiftShip Express Website</a>
+    </div>
+
+    <div class="test-section">
+        <h2>📝 Quick Test Checklist</h2>
+        <p>✅ <strong>Essential tests to perform:</strong></p>
+        <ol>
+            <li>Track package with sample number <code>SW123456789</code></li>
+            <li>Calculate shipping rate (US to UK, 2kg)</li>
+            <li>Create a test shipment (fill all forms)</li>
+            <li>Test mobile responsiveness</li>
+            <li>Submit contact form</li>
+            <li>Test navigation and smooth scrolling</li>
+            <li>Verify all animations work</li>
+            <li>Check form validation (try empty fields)</li>
+        </ol>
+    </div>
+
+    <footer style="text-align: center; margin-top: 40px; padding-top: 20px; border-top: 1px solid #e5e7eb; color: #6b7280;">
+        <p>SwiftShip Express - Dummy Shipping Website<br>
+        Created for demonstration and testing purposes</p>
+    </footer>
+</body>
+</html>
